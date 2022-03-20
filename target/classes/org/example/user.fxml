@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserViewController">
+   <children>
+      <TableView fx:id="packages" layoutX="6.0" layoutY="22.0" prefHeight="516.0" prefWidth="712.0" stylesheets="@../../styles/application.css">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="no." />
+          <TableColumn fx:id="destinationCol" prefWidth="105.0" text="destination" />
+            <TableColumn fx:id="nameCol" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="detailsCol" prefWidth="107.0" text="details" />
+            <TableColumn fx:id="startCol" prefWidth="84.0" text="start" />
+            <TableColumn fx:id="endCol" prefWidth="90.0" text="end" />
+            <TableColumn fx:id="priceCol" prefWidth="49.0" text="price" />
+            <TableColumn fx:id="statusCol" prefWidth="68.0" text="status" />
+            <TableColumn fx:id="unitsCol" prefWidth="49.0" text="left" />
+        </columns>
+      </TableView>
+      <Button fx:id="addDestination" layoutX="763.0" layoutY="22.0" mnemonicParsing="false" onAction="#onFilter" prefHeight="39.0" prefWidth="76.0" stylesheets="@../../styles/application.css" text="Filter" />
+      <Label layoutX="758.0" layoutY="149.0" prefHeight="30.0" prefWidth="162.0" text="Destination:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="destinationBox" layoutX="758.0" layoutY="190.0" prefHeight="31.0" prefWidth="162.0" promptText="Destination" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <DatePicker fx:id="date" layoutX="869.0" layoutY="73.0" prefHeight="31.0" prefWidth="96.0" promptText="date" />
+      <Label layoutX="758.0" layoutY="73.0" prefHeight="30.0" prefWidth="64.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="759.0" layoutY="111.0" prefHeight="30.0" prefWidth="64.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="my_bookings" layoutX="756.0" layoutY="282.0" prefHeight="285.0" prefWidth="218.0" stylesheets="@../../styles/application.css">
+         <columns>
+            <TableColumn fx:id="destinationCol1" prefWidth="107.0" text="destination" />
+            <TableColumn fx:id="nameCol1" prefWidth="73.0" text="name" />
+         </columns>
+      </TableView>
+      <Label layoutX="755.0" layoutY="236.0" prefHeight="30.0" prefWidth="200.0" text="My bookings:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="price" layoutX="862.0" layoutY="111.0" prefHeight="31.0" prefWidth="96.0" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <ComboBox fx:id="filterBy" layoutX="855.0" layoutY="26.0" prefHeight="31.0" prefWidth="110.0" promptText="By" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <Label fx:id="error" layoutX="14.0" layoutY="538.0" prefHeight="31.0" prefWidth="209.0" styleClass="error-label" stylesheets="@../../styles/application.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

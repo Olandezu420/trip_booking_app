@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <children>
+      <Label fx:id="finalLabel" layoutX="23.0" layoutY="21.0" prefHeight="25.0" prefWidth="149.0" text="Enter your credentials:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="username" layoutX="23.0" layoutY="52.0" prefHeight="25.0" prefWidth="149.0" promptText="Username" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <PasswordField fx:id="password" layoutX="23.0" layoutY="111.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <PasswordField fx:id="confirmPassword" layoutX="23.0" layoutY="244.0" prefHeight="25.0" prefWidth="149.0" promptText="Confirm password" styleClass="text-field" stylesheets="@../../styles/application.css" />
+      <Label fx:id="usernameLabel" layoutX="26.0" layoutY="84.0" prefHeight="27.0" prefWidth="149.0" styleClass="error-label" stylesheets="@../../styles/application.css">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="confirmPasswordLabel" layoutX="23.0" layoutY="279.0" prefHeight="17.0" prefWidth="149.0" styleClass="error-label" stylesheets="@../../styles/application.css" />
+      <Button fx:id="signUp" layoutX="23.0" layoutY="310.0" mnemonicParsing="false" onAction="#singUp" prefHeight="27.0" prefWidth="149.0" stylesheets="@../../styles/application.css" text="Sign Up" />
+      <Button fx:id="goBack" layoutX="23.0" layoutY="344.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="149.0" stylesheets="@../../styles/application.css" text="Go back" />
+      <TextArea fx:id="passwordLabel" layoutX="22.0" layoutY="142.0" prefHeight="95.0" prefWidth="177.0" styleClass="text-area" stylesheets="@../../styles/application.css" text="- at least one digit&#10;- at least one lowercase&#10;- at least one uppercase&#10;- between 8 - 20 characters&#10;- at least one special character" wrapText="true" />
+   </children>
+</AnchorPane>
